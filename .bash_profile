@@ -4,6 +4,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
 
+if [ -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ]; then
+  source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+  PS1='$(kube_ps1)'$PS1
+fi
+
 if command -v kubectl &> /dev/null
 then
     source <(kubectl completion bash)
