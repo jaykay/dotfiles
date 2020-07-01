@@ -1,5 +1,13 @@
 alias config='/usr/bin/git --git-dir=/Users/kaffkej/.cfg/ --work-tree=/Users/kaffkej'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then 
+. $(brew --prefix)/etc/bash_completion
+fi
+
+if command -v kubectl &> /dev/null
+then
+    source <(kubectl completion bash)
+fi
 
 # Git aliases
 alias gp='git push'
