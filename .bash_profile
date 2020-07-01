@@ -9,6 +9,11 @@ then
     source <(kubectl completion bash)
 fi
 
+if command -v cpcli &> /dev/null
+then
+    source <(cpcli completion bash)
+fi
+
 # Git aliases
 alias gp='git push'
 alias gc='git commit -am'
