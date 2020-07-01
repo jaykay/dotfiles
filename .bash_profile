@@ -1,4 +1,4 @@
-alias config='/usr/bin/git --git-dir=/Users/kaffkej/.cfg/ --work-tree=/Users/kaffkej'
+alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then 
 . $(brew --prefix)/etc/bash_completion
