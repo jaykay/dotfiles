@@ -5,7 +5,7 @@ From https://www.atlassian.com/git/tutorials/dotfiles
 
 
 ```bash
-git clone --bare https://bitbucket.org/jaykay/config.git $HOME/.cfg
+git clone --bare https://github.com/jaykay/config.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
@@ -20,3 +20,7 @@ fi;
 config checkout
 config config status.showUntrackedFiles no
 ```
+
+Call this with 
+
+    $ curl -Lks https://git.io/JJJF1 | /bin/bash
