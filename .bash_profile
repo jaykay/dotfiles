@@ -1,3 +1,5 @@
+export PATH=$PATH:/Users/kaffkej/go/bin/
+
 alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then 
@@ -18,6 +20,9 @@ if command -v cpcli &> /dev/null
 then
     source <(cpcli completion bash)
 fi
+
+# Other useful aliasses
+alias ll='ls -Al'
 
 # Git aliases
 alias gp='git push'
