@@ -8,7 +8,7 @@ export ZSH="/Users/kaffkej/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +68,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,9 +113,29 @@ then
     source <(kubectl completion zsh)
 fi
 
-if command -v cpcli &> /dev/null
+# if command -v cpcli &> /dev/null
+# then
+#     source <(cpcli completion zsh)
+# fi
+
+if command -v argocd &> /dev/null
 then
-    source <(cpcli completion zsh)
+    source <(argocd completion zsh)
+fi
+
+# if command -v 42nerdsctl &> /dev/null
+# then
+#     source <(42nerdsctl completion zsh)
+# fi
+
+if command -v k3d &> /dev/null
+then
+    source <(k3d completion zsh)
+fi
+
+if command -v skaffold &> /dev/null
+then
+    source <(skaffold completion zsh)
 fi
 
 # Other useful aliasses
