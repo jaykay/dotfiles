@@ -1,0 +1,3 @@
+packages:
+  darwin:
+    - git
