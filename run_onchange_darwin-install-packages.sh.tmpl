@@ -1,8 +1,10 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-brew bundle --file=/dev/stdin <<EOF
-brew "git"
-cask "google-chrome"
-EOF
+# Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+# This make the script run, whenever your Brewfile changes.
+# You can call this script with `chezmoi apply`.
+
+brew bundle --global
+brew bundle cleanup --global --force
 {{ end -}}
