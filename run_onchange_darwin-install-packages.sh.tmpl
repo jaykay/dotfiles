@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.os "darwin" -}}
+{{- if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
 # Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
