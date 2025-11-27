@@ -123,3 +123,4 @@ eval "$(starship init bash)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+export EDITOR="flatpak run com.visualstudio.code --wait"
