@@ -7,5 +7,7 @@ cask "font-fira-code-nerd-font"
 brew "kubernetes-cli"
 brew "krew"
 
+cask "flameshot" if OS.mac?
+
 cask "visual-studio-code" if OS.mac?
 cask "google-chrome" if OS.mac?
