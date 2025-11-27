@@ -122,5 +122,3 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init bash)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-export EDITOR="code --wait"
