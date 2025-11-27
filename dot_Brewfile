@@ -7,6 +7,7 @@ cask "font-fira-code-nerd-font"
 brew "kubernetes-cli"
 brew "krew"
 brew "argocd"
+brew "k9s"
 
 cask "flameshot" if OS.mac?
 
