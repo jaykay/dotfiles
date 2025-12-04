@@ -9,6 +9,8 @@ brew "krew"
 brew "argocd"
 brew "k9s"
 
+brew "uv"
+
 cask "flameshot" if OS.mac?
 
 cask "visual-studio-code" if OS.mac?

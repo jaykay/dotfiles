@@ -115,3 +115,12 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init bash)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Enable argocd bash completion if argocd is installed
+if command -v argocd &> /dev/null; then
+    source <(argocd completion bash)
+fi
+
+if command -v thefuck &> /dev/null; then
+    eval "$(thefuck --alias)"
+fi
