@@ -9,6 +9,7 @@ brew "krew"
 brew "argocd"
 brew "k9s"
 brew "kind"
+brew "cloud-provider-kind"
 
 brew "uv"
 
