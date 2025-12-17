@@ -13,6 +13,7 @@ brew "kind"
 brew "cloud-provider-kind"
 brew "tilt"
 
+# Python stuff
 brew "uv"
 
 cask "flameshot" if OS.mac?
