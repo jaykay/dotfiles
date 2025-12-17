@@ -125,4 +125,3 @@ if command -v thefuck &> /dev/null; then
     eval "$(thefuck --alias)"
 fi
 
-source '/home/julian/.bash_completions/comfy.sh'

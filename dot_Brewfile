@@ -4,12 +4,14 @@ brew "starship"
 brew "thefuck"
 cask "font-fira-code-nerd-font"
 
+# Kubernetes Stuff
 brew "kubernetes-cli"
 brew "krew"
 brew "argocd"
 brew "k9s"
 brew "kind"
 brew "cloud-provider-kind"
+brew "tilt"
 
 brew "uv"
 
