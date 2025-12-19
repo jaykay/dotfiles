@@ -12,6 +12,7 @@ brew "k9s"
 brew "kind"
 brew "cloud-provider-kind"
 brew "tilt"
+brew "ctlptl"
 
 # Python stuff
 brew "uv"
