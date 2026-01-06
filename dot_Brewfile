@@ -14,7 +14,7 @@ brew "cloud-provider-kind"
 brew "tilt"
 brew "ctlptl"
 
-# Python stuff
+# Python things and stuff
 brew "uv"
 brew "pipx"
 
