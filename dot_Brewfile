@@ -16,6 +16,7 @@ brew "ctlptl"
 
 # Python stuff
 brew "uv"
+brew "pipx"
 
 cask "flameshot" if OS.mac?
 
