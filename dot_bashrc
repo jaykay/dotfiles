@@ -126,6 +126,9 @@ if command -v thefuck &> /dev/null; then
     eval "$(thefuck --alias)"
 fi
 
+export OX_API_URL=
+export OX_API_USER=
+export OX_API_PASSWORD=
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
