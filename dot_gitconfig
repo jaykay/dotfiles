@@ -1,8 +1,14 @@
 [user]
 	email = julian@42nerds.com
 	name = Julian Kaffke
-	signingkey = 85E987F0109EA9A0
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN87Gbi1p4kQidG4wHv9OtJCiaenZnALvT+gpU01JtnS
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/opt/1Password/op-ssh-sign"
+
 [commit]
-	gpgsign = true
-[tag]
-	gpgSign = true
+  gpgsign = true
+

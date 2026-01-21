@@ -126,9 +126,17 @@ if command -v thefuck &> /dev/null; then
     eval "$(thefuck --alias)"
 fi
 
-export OX_API_URL=
-export OX_API_USER=
-export OX_API_PASSWORD=
+# Load OnePassword credentials for OX API
+{{ range (onepassword "deeuj6uyu6h56mbo2vg3e6cjzi").fields -}}
+{{   if and (eq .label "password") (eq .purpose "PASSWORD") -}}
+export OX_API_PASSWORD={{ .value }}
+{{ end -}}
+{{   if and (eq .label "username") (eq .purpose "USERNAME") }}
+export OX_API_USER={{ .value }}
+{{ end -}}
+{{ end -}}
+export OX_API_URL={{- (index (onepassword "deeuj6uyu6h56mbo2vg3e6cjzi").urls 0).href }}
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
