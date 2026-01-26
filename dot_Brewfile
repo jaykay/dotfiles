@@ -18,6 +18,9 @@ brew "ctlptl"
 brew "uv"
 brew "pipx"
 
+# General Stuff
+brew "npm"
+
 cask "flameshot" if OS.mac?
 
 cask "visual-studio-code" if OS.mac?
