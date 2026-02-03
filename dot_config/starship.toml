@@ -200,3 +200,9 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[kubernetes]
+disabled = false
+symbol = "⎈ "
+format = '[$symbol$context( \$$$namespace\$$)]($style)'
+style = "bold blue"
