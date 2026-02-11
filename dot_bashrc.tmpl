@@ -116,6 +116,7 @@ eval "$(starship init bash)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/home/julian/.local/bin:$PATH"
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 # Enable argocd bash completion if argocd is installed
 if command -v argocd &> /dev/null; then
