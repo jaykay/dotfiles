@@ -13,6 +13,7 @@ brew "kind"
 brew "cloud-provider-kind"
 brew "tilt"
 brew "ctlptl"
+brew "helm"
 
 # Python things and stuff
 brew "uv"
