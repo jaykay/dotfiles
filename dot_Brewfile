@@ -21,6 +21,7 @@ brew "pipx"
 
 # General Stuff
 brew "npm"
+cask "claude-code"
 
 cask "flameshot" if OS.mac?
 
