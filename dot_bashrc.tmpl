@@ -133,6 +133,9 @@ if command -v op &> /dev/null; then
     export SSH_AUTH_SOCK=~/.1password/agent.sock
 fi
 
+# ptouch bash completion                                                                                                                                                                    
+command -v ptouch &>/dev/null && eval "$(ptouch completion bash)"
+
 # Load OnePassword credentials for OX API
 {{ range (onepassword "deeuj6uyu6h56mbo2vg3e6cjzi").fields -}}
 {{   if and (eq .label "password") (eq .purpose "PASSWORD") -}}
