@@ -23,6 +23,7 @@ brew "pipx"
 brew "npm"
 brew "gh"
 cask "claude-code"
+brew "hcloud"
 
 cask "flameshot" if OS.mac?
 
