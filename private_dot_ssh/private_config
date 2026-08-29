@@ -1,2 +1,7 @@
 Host *
 	IdentityAgent ~/.1password/agent.sock
+
+Host git.42nerds.host
+    HostName 10.10.2.10
+    Port 2222
+    User git
