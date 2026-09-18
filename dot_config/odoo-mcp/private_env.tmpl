@@ -5,7 +5,7 @@
 # Fill in the op:// reference: op://<vault>/<item>/<field>, e.g. the
 # "credential" field of an "API Credential" item. Check it with:
 #   op read --no-newline "op://<vault>/<item>/<field>"
-ODOO_URL=https://<name>.odoo.com
-ODOO_API_KEY={{ onepasswordRead "op://<vault>/<item>/<field>" }}
+ODOO_URL=https://42nerds.odoo.com
+ODOO_API_KEY={{ onepasswordRead "op://Employee/Odoo 42 N.E.R.D.S./Andere Felder/api_key" }}
 # Optional, only for multi-database servers:
 # ODOO_DB=
