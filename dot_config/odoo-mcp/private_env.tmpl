@@ -1,0 +1,11 @@
+# ~/.config/odoo-mcp/env -- managed by chezmoi, secret from 1Password.
+# Read by babelfish (odoo-mcp) whenever ODOO_URL / ODOO_API_KEY are not set in
+# the environment. Mode 0600 via the private_ prefix on the source file.
+#
+# Fill in the op:// reference: op://<vault>/<item>/<field>, e.g. the
+# "credential" field of an "API Credential" item. Check it with:
+#   op read --no-newline "op://<vault>/<item>/<field>"
+ODOO_URL=https://<name>.odoo.com
+ODOO_API_KEY={{ onepasswordRead "op://<vault>/<item>/<field>" }}
+# Optional, only for multi-database servers:
+# ODOO_DB=
