@@ -147,20 +147,6 @@ export OX_API_USER={{ .value }}
 {{ end -}}
 export OX_API_URL={{- (index (onepassword "deeuj6uyu6h56mbo2vg3e6cjzi").urls 0).href }}
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/julian/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/julian/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/julian/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/julian/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 
 # Rust toolchain (rustup)
