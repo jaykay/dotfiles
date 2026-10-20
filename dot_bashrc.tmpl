@@ -104,11 +104,15 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
+  if [ -r /home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh ]; then
+    . /home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh
+  elif [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+  # brew's compat dir replaces /etc/bash_completion.d, so load git-prompt by hand
+  [ -r /etc/bash_completion.d/git-prompt ] && . /etc/bash_completion.d/git-prompt
 fi
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -151,3 +155,6 @@ export OX_API_URL={{- (index (onepassword "deeuj6uyu6h56mbo2vg3e6cjzi").urls 0).
 
 # Rust toolchain (rustup)
 . "$HOME/.cargo/env"
+
+# ActivityWatch: project path in the terminal title
+. "$HOME/.config/aw-title.sh"
